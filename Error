@@ -1,6 +1,6 @@
-id  |symbol    |face_value|shares_outstanding|trade_date|close_price|
-----+----------+----------+------------------+----------+-----------+
-2276|NAVINFLUOR|    2.0000|       51300000.00|2026-08-06|  8650.0000|
-2276|NAVINFLUOR|    2.0000|       51300000.00|2026-08-05|  7609.5000|
-2276|NAVINFLUOR|    2.0000|       51300000.00|2026-08-04|  7629.0000|
-2276|NAVINFLUOR|    2.0000|       51300000.00|2026-08-03|  7555.0000|
+SELECT period_end, period_type, consolidated, months_covered, rounding_level,
+       revenue, net_profit, dividends_paid, eps
+FROM financials
+WHERE company_id = 2276
+ORDER BY period_end DESC
+LIMIT 8;
